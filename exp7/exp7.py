@@ -71,7 +71,7 @@ if __name__ == "__main__":
             # input list
             mylist = [1,2,3,4]
 
-            print("The following Array is going to simulate the shared memory")
+            print("The following Array is going to simulate the Message Queue")
             for item in mylist:
                 print(item, end=" ")
             print()

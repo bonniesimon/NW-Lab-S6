@@ -5,10 +5,10 @@ def client():
     port=7000
     sock=socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
     sock.connect((host, port))
-    sock.sendto("Send time",(host, port))
+    sock.sendto("Send time".encode(),(host, port))
     print("The system time\n")
     res= sock.recvfrom(1024)
-    print(res)
+    print(res[0].decode())
     
     
 

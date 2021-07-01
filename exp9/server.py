@@ -16,12 +16,8 @@ def handle_client(sock, addr, i):
             print("\nconnection with client " + str(i) + " broken\n")
             break
         now = str(datetime.now())
-        sock.sendto(now,(host, port))
+        sock.sendto(now.encode(),(host, port))
         signal(SIGPIPE, SIG_DFL)
-
-       
-
-                
 
 def server():
     i=1
